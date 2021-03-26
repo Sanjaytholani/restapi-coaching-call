@@ -7,6 +7,8 @@ const app = express();
 
 const url = process.env.DB_URL;
 
+app.use("cors");
+
 mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected"))
