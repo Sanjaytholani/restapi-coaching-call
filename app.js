@@ -20,6 +20,4 @@ app.use(express.json());
 
 app.use("/quote", quoteRoutes); //middleware
 
-app.listen(3000, () => {
-  console.log("Listening at port 3000");
-});
+app.listen(process.env.PORT || 8000);
